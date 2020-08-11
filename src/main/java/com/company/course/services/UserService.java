@@ -13,7 +13,7 @@ import com.company.course.repositories.UserRepository;
 public class UserService {
 	
 	@Autowired
-	private UserRepository userRepository;
+	UserRepository userRepository;
 	
 	public List<User> findAll(){
 		
