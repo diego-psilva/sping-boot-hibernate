@@ -2,7 +2,6 @@ package com.company.course.entities;
 
 import java.io.Serializable;
 import java.time.Instant;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -31,6 +30,9 @@ public class Order implements Serializable{
 	@ManyToOne
 	@JoinColumn(name = "client_id")
 	private User client;
+	
+	//@OneToMany(mappedBy = "id.order")
+	//private Set<OrderItem> items = new HashSet<>();
 	
 	public Order() {
 		
@@ -82,6 +84,9 @@ public class Order implements Serializable{
 		this.client = client;
 	}
 
+//	public Set<OrderItem> getItems (){
+//		return items;
+//	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
